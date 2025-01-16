@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">{t('LLC "Beecommerce", 2024')}</h3>
             <p className="text-gray-400">
-              {`${t('INN')} 9200024439`}
+              {`${t('INN')} 9200024439`}<br/>
               {t('corpEmail')}: info@beecommercecorp.ru<br />
             </p>
           </div>
