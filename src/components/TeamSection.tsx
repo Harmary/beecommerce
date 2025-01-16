@@ -20,7 +20,7 @@ export function TeamSection() {
     },
     {
       photo: "/lovable-uploads/85ec408a-fb10-400d-bd90-5a2beb43ac33.png",
-      name: "backendDevRole",
+      name: "backendDevName",
       role: "backendDevRole",
       bio: "backendDevBio",
     },
