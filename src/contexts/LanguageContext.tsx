@@ -50,6 +50,70 @@ export const translations: Translations = {
     en: 'Project implemented with the support of the "Innovation Promotion Fund" within the framework of the federal project "University Technology Entrepreneurship Platform"',
     ru: 'Проект выполнен при поддержке «Фонда содействия инновациям» в рамках федерального проекта «Платформа университетского технологического предпринимательства»',
   },
+  smartDataTitle: {
+    en: "Smart Data Collection",
+    ru: "Умный сбор данных",
+  },
+  smartDataDesc: {
+    en: "Automatically gather sales, customer behavior, and performance metrics from your eCommerce platforms",
+    ru: "Автоматический сбор данных о продажах, поведении клиентов и показателях эффективности с ваших платформ электронной коммерции",
+  },
+  analyticsTitle: {
+    en: "Advanced Analytics",
+    ru: "Продвинутая аналитика",
+  },
+  analyticsDesc: {
+    en: "Transform raw data into actionable insights with our powerful analytics tools and visualizations",
+    ru: "Превращайте необработанные данные в полезные выводы с помощью наших мощных инструментов аналитики и визуализации",
+  },
+  monitoringTitle: {
+    en: "Real-time Monitoring",
+    ru: "Мониторинг в реальном времени",
+  },
+  monitoringDesc: {
+    en: "Track your business metrics in real-time and receive instant alerts about important changes",
+    ru: "Отслеживайте показатели вашего бизнеса в реальном времени и получайте мгновенные уведомления о важных изменениях",
+  },
+  integrationTitle: {
+    en: "Easy Integration",
+    ru: "Простая интеграция",
+  },
+  integrationDesc: {
+    en: "Seamlessly connect with popular eCommerce platforms and start collecting data in minutes",
+    ru: "Легко подключайтесь к популярным платформам электронной коммерции и начинайте собирать данные за считанные минуты",
+  },
+  ceoName: {
+    en: "Anna Smith",
+    ru: "Анна Смит",
+  },
+  ceoRole: {
+    en: "CEO & Frontend Developer",
+    ru: "CEO и Frontend-разработчик",
+  },
+  ceoBio: {
+    en: "Expert in React and modern web technologies with a passion for creating intuitive user interfaces",
+    ru: "Эксперт по React и современным веб-технологиям, увлеченная созданием интуитивных пользовательских интерфейсов",
+  },
+  backendDevName: {
+    en: "Michael Johnson",
+    ru: "Михаил Джонсон",
+  },
+  backendDevRole: {
+    en: "Backend Developer",
+    ru: "Backend-разработчик",
+  },
+  backendDevBio: {
+    en: "Specialized in building scalable backend systems and data processing pipelines",
+    ru: "Специализируется на создании масштабируемых бэкенд-систем и конвейеров обработки данных",
+  },
+  formTitle: {
+    en: "Ready to Boost Your eCommerce Analytics?",
+    ru: "Готовы улучшить аналитику вашего интернет-магазина?",
+  },
+  formDesc: {
+    en: "Get in touch with us to discover how Beecommerce can transform your business data into actionable insights",
+    ru: "Свяжитесь с нами, чтобы узнать, как Beecommerce может превратить данные вашего бизнеса в полезные инсайты",
+  },
 };
 
 interface LanguageContextType {

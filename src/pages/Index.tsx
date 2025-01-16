@@ -3,92 +3,53 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ContactForm } from "@/components/ContactForm";
 import { BarChart3, Database, LineChart, Settings, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export default function Index() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const features = [
     {
       icon: <Database className="w-10 h-10" />,
-      title: { 
-        en: "Smart Data Collection", 
-        ru: "Умный сбор данных" 
-      },
-      description: {
-        en: "Automatically gather sales, customer behavior, and performance metrics from your eCommerce platforms",
-        ru: "Автоматический сбор данных о продажах, поведении клиентов и показателях эффективности с ваших платформ электронной коммерции",
-      },
+      title: "smartDataTitle",
+      description: "smartDataDesc",
     },
     {
       icon: <BarChart3 className="w-10 h-10" />,
-      title: { 
-        en: "Advanced Analytics", 
-        ru: "Продвинутая аналитика" 
-      },
-      description: {
-        en: "Transform raw data into actionable insights with our powerful analytics tools and visualizations",
-        ru: "Превращайте необработанные данные в полезные выводы с помощью наших мощных инструментов аналитики и визуализации",
-      },
+      title: "analyticsTitle",
+      description: "analyticsDesc",
     },
     {
       icon: <LineChart className="w-10 h-10" />,
-      title: { 
-        en: "Real-time Monitoring", 
-        ru: "Мониторинг в реальном времени" 
-      },
-      description: {
-        en: "Track your business metrics in real-time and receive instant alerts about important changes",
-        ru: "Отслеживайте показатели вашего бизнеса в реальном времени и получайте мгновенные уведомления о важных изменениях",
-      },
+      title: "monitoringTitle",
+      description: "monitoringDesc",
     },
     {
       icon: <Settings className="w-10 h-10" />,
-      title: { 
-        en: "Easy Integration", 
-        ru: "Простая интеграция" 
-      },
-      description: {
-        en: "Seamlessly connect with popular eCommerce platforms and start collecting data in minutes",
-        ru: "Легко подключайтесь к популярным платформам электронной коммерции и начинайте собирать данные за считанные минуты",
-      },
+      title: "integrationTitle",
+      description: "integrationDesc",
     },
   ];
 
   const team = [
     {
-      name: { 
-        en: "Alex Thompson", 
-        ru: "Алекс Томпсон" 
-      },
-      role: { 
-        en: "CEO & Founder", 
-        ru: "Генеральный директор и основатель" 
-      },
-      bio: {
-        en: "10+ years of experience in eCommerce analytics and business intelligence",
-        ru: "Более 10 лет опыта в аналитике электронной коммерции и бизнес-аналитике"
-      }
+      photo: "/lovable-uploads/ea373989-86d4-4354-8921-f5de6664e879.png",
+      name: "ceoName",
+      role: "ceoRole",
+      bio: "ceoBio",
     },
     {
-      name: { 
-        en: "Maria Rodriguez", 
-        ru: "Мария Родригес" 
-      },
-      role: { 
-        en: "Chief Technology Officer", 
-        ru: "Технический директор" 
-      },
-      bio: {
-        en: "Expert in big data processing and machine learning algorithms",
-        ru: "Эксперт в обработке больших данных и алгоритмах машинного обучения"
-      }
+      photo: "/lovable-uploads/85ec408a-fb10-400d-bd90-5a2beb43ac33.png",
+      name: "backendDevName",
+      role: "backendDevRole",
+      bio: "backendDevBio",
     },
   ];
 
   const navLinks = [
-    { href: "#features", label: { en: "Features", ru: "Возможности" } },
-    { href: "#team", label: { en: "Team", ru: "Команда" } },
-    { href: "#contact", label: { en: "Contact", ru: "Контакты" } },
+    { href: "#features", label: t("features") },
+    { href: "#team", label: t("team") },
+    { href: "#contact", label: t("contact") },
   ];
 
   return (
@@ -105,7 +66,7 @@ export default function Index() {
                   href={link.href}
                   className="text-gray-600 hover:text-primary transition-colors"
                 >
-                  {link.label[t("language") as "en" | "ru"]}
+                  {link.label}
                 </a>
               ))}
             </nav>
@@ -124,7 +85,7 @@ export default function Index() {
             {t("description")}
           </p>
           <Button size="lg" className="group">
-            {t("language") === "en" ? "Start Free Trial" : "Начать бесплатный период"}
+            {t("submit")}
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
@@ -144,10 +105,10 @@ export default function Index() {
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">
-                  {feature.title[t("language") as "en" | "ru"]}
+                  {t(feature.title)}
                 </h3>
                 <p className="text-gray-600">
-                  {feature.description[t("language") as "en" | "ru"]}
+                  {t(feature.description)}
                 </p>
               </div>
             ))}
@@ -159,21 +120,24 @@ export default function Index() {
       <section id="team" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">{t("team")}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {team.map((member, index) => (
               <div
                 key={index}
                 className="text-center p-6 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4" />
+                <Avatar className="w-32 h-32 mx-auto mb-4">
+                  <AvatarImage src={member.photo} alt={t(member.name)} />
+                  <AvatarFallback>{t(member.name).split(" ").map(n => n[0]).join("")}</AvatarFallback>
+                </Avatar>
                 <h3 className="text-xl font-semibold">
-                  {member.name[t("language") as "en" | "ru"]}
+                  {t(member.name)}
                 </h3>
                 <p className="text-primary mb-2">
-                  {member.role[t("language") as "en" | "ru"]}
+                  {t(member.role)}
                 </p>
                 <p className="text-gray-600">
-                  {member.bio[t("language") as "en" | "ru"]}
+                  {t(member.bio)}
                 </p>
               </div>
             ))}
@@ -184,11 +148,9 @@ export default function Index() {
       {/* Contact Section */}
       <section id="contact" className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">{t("contact")}</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">{t("formTitle")}</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            {t("language") === "en" 
-              ? "Ready to transform your eCommerce analytics? Get in touch with us to start your journey towards data-driven success."
-              : "Готовы трансформировать вашу аналитику электронной коммерции? Свяжитесь с нами, чтобы начать путь к успеху, основанному на данных."}
+            {t("formDesc")}
           </p>
           <ContactForm />
         </div>
