@@ -15,8 +15,8 @@ export const translations: Translations = {
     ru: "Собираем аналитику электронной коммерции, как пчелы собирают мед",
   },
   description: {
-    en: "Comprehensive data collection and analytics platform for eCommerce businesses",
-    ru: "Комплексная платформа сбора и анализа данных для электронной коммерции",
+    en: "Transform your eCommerce business with powerful data analytics and real-time insights",
+    ru: "Трансформируйте ваш бизнес электронной коммерции с помощью мощной аналитики данных и аналитики в реальном времени",
   },
   features: {
     en: "Features",
@@ -31,20 +31,20 @@ export const translations: Translations = {
     ru: "Связаться с нами",
   },
   submit: {
-    en: "Submit",
-    ru: "Отправить",
+    en: "Get Started",
+    ru: "Начать сейчас",
   },
   name: {
-    en: "Name",
-    ru: "Имя",
+    en: "Your Name",
+    ru: "Ваше имя",
   },
   email: {
-    en: "Email",
-    ru: "Эл. почта",
+    en: "Business Email",
+    ru: "Рабочая почта",
   },
   message: {
-    en: "Message",
-    ru: "Сообщение",
+    en: "Tell us about your business needs",
+    ru: "Расскажите о потребностях вашего бизнеса",
   },
   sponsorText: {
     en: 'Project implemented with the support of the "Innovation Promotion Fund" within the framework of the federal project "University Technology Entrepreneurship Platform"',
