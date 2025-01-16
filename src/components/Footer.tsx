@@ -8,10 +8,10 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Beecommerce</h3>
+            <h3 className="text-xl font-bold mb-4">{t('LLC "Beecommerce", 2024')}</h3>
             <p className="text-gray-400">
-              Email: contact@beecommerce.com<br />
-              Phone: +7 (999) 123-45-67
+              {`${t('INN')} 9200024439`}
+              {t('corpEmail')}: info@beecommercecorp.ru<br />
             </p>
           </div>
           <div>
@@ -24,7 +24,7 @@ export function Footer() {
           </div>
         </div>
         <div className="text-center text-sm text-gray-400 pt-8 border-t border-gray-700">
-          © {new Date().getFullYear()} Beecommerce. All rights reserved.
+          © {new Date().getFullYear()} Beecommerce. {t('All rights reserved.')}
         </div>
       </div>
     </footer>

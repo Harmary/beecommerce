@@ -42,6 +42,14 @@ export const translations: Translations = {
     en: "Business Email",
     ru: "Рабочая почта",
   },
+  corpEmail: {
+    en: "Email",
+    ru: "Почта",
+  },
+  INN: {
+    en: 'INN',
+    ru: 'ИНН'
+  },
   message: {
     en: "Tell us about your business needs",
     ru: "Расскажите о потребностях вашего бизнеса",
@@ -49,6 +57,14 @@ export const translations: Translations = {
   sponsorText: {
     en: 'Project implemented with the support of the "Innovation Promotion Fund" within the framework of the federal project "University Technology Entrepreneurship Platform"',
     ru: 'Проект выполнен при поддержке «Фонда содействия инновациям» в рамках федерального проекта «Платформа университетского технологического предпринимательства»',
+  },
+  'LLC "Beecommerce", 2024': {
+    en: 'LLC "Beecommerce", 2024',
+    ru: 'OOO "Бикоммерс", 2024'
+  },
+  'All rights reserved.': {
+    en: 'All rights reserved.',
+    ru: 'Все права защищены.'
   },
   smartDataTitle: {
     en: "Smart Data Collection",
@@ -83,8 +99,8 @@ export const translations: Translations = {
     ru: "Легко подключайтесь к популярным платформам электронной коммерции и начинайте собирать данные за считанные минуты",
   },
   ceoName: {
-    en: "Anna Smith",
-    ru: "Анна Смит",
+    en: "Maria Kharlamova",
+    ru: "Мария Харламова",
   },
   ceoRole: {
     en: "CEO & Frontend Developer",
@@ -95,8 +111,8 @@ export const translations: Translations = {
     ru: "Эксперт по React и современным веб-технологиям, увлеченная созданием интуитивных пользовательских интерфейсов",
   },
   backendDevName: {
-    en: "Michael Johnson",
-    ru: "Михаил Джонсон",
+    en: "Anatoly Divanis",
+    ru: "Анатолий Диванис",
   },
   backendDevRole: {
     en: "Backend Developer",
@@ -125,7 +141,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguage] = useState<Language>("ru");
 
   const t = (key: string): string => {
     return translations[key]?.[language] || key;
