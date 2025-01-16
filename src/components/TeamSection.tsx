@@ -14,13 +14,13 @@ export function TeamSection() {
   const team: TeamMember[] = [
     {
       photo: "/lovable-uploads/4318ff02-677a-4fd2-9abe-4dc49e3f71cb.png",
-      name: t("Maria Kharlamova"),
+      name: "ceoName",
       role: "ceoRole",
       bio: "ceoBio",
     },
     {
       photo: "/lovable-uploads/85ec408a-fb10-400d-bd90-5a2beb43ac33.png",
-      name: t("Anatoly Divanis"),
+      name: "backendDevRole",
       role: "backendDevRole",
       bio: "backendDevBio",
     },
