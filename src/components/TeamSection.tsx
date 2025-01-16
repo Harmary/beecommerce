@@ -40,7 +40,7 @@ export function TeamSection() {
                 <AvatarImage src={member.photo} alt={member.name} />
                 <AvatarFallback>{member.name.split(" ").map(n => n[0]).join("")}</AvatarFallback>
               </Avatar>
-              <h3 className="text-xl font-semibold">{member.name}</h3>
+              <h3 className="text-xl font-semibold">{t(member.name)}</h3>
               <p className="text-primary mb-2">{t(member.role)}</p>
               <p className="text-gray-600">{t(member.bio)}</p>
             </div>
