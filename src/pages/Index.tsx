@@ -4,9 +4,11 @@ import { ContactForm } from "@/components/ContactForm";
 import { BarChart3, Database, LineChart, Settings, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { useInView } from "react-intersection-observer";
+import { cn } from "@/lib/utils";
 
 export default function Index() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   const features = [
     {
@@ -33,14 +35,14 @@ export default function Index() {
 
   const team = [
     {
-      photo: "/lovable-uploads/ea373989-86d4-4354-8921-f5de6664e879.png",
-      name: "ceoName",
+      photo: "/lovable-uploads/4318ff02-677a-4fd2-9abe-4dc49e3f71cb.png",
+      name: "Maria Kharlamova",
       role: "ceoRole",
       bio: "ceoBio",
     },
     {
       photo: "/lovable-uploads/85ec408a-fb10-400d-bd90-5a2beb43ac33.png",
-      name: "backendDevName",
+      name: "Anatoly Divanis",
       role: "backendDevRole",
       bio: "backendDevBio",
     },
@@ -51,6 +53,11 @@ export default function Index() {
     { href: "#team", label: t("team") },
     { href: "#contact", label: t("contact") },
   ];
+
+  const [ref1, inView1] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [ref2, inView2] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [ref3, inView3] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [ref4, inView4] = useInView({ threshold: 0.2, triggerOnce: true });
 
   return (
     <div className="min-h-screen bg-white">
@@ -92,15 +99,30 @@ export default function Index() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20">
+      <section id="features" className="py-20 relative">
+        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20"></div>
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">{t("features")}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-16">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="p-6 rounded-lg border hover:border-primary transition-colors group"
+                ref={index === 0 ? ref1 : index === 1 ? ref2 : index === 2 ? ref3 : ref4}
+                className={cn(
+                  "p-6 rounded-lg border hover:border-primary transition-colors group relative",
+                  "transform transition-all duration-700",
+                  index % 2 === 0 ? "mr-auto" : "ml-auto",
+                  index % 2 === 0 ? "translate-x-[-100px]" : "translate-x-[100px]",
+                  (index === 0 && inView1) || 
+                  (index === 1 && inView2) || 
+                  (index === 2 && inView3) || 
+                  (index === 3 && inView4) ? "opacity-100 translate-x-0" : "opacity-0",
+                  "max-w-xl w-full"
+                )}
               >
+                <div className="absolute top-1/2 -translate-y-1/2 w-8 h-0.5 bg-primary/20
+                  ${index % 2 === 0 ? 'right-[-32px]' : 'left-[-32px]'}"
+                ></div>
                 <div className="text-primary mb-4 group-hover:animate-float">
                   {feature.icon}
                 </div>
@@ -127,11 +149,11 @@ export default function Index() {
                 className="text-center p-6 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow"
               >
                 <Avatar className="w-32 h-32 mx-auto mb-4">
-                  <AvatarImage src={member.photo} alt={t(member.name)} />
-                  <AvatarFallback>{t(member.name).split(" ").map(n => n[0]).join("")}</AvatarFallback>
+                  <AvatarImage src={member.photo} alt={member.name} />
+                  <AvatarFallback>{member.name.split(" ").map(n => n[0]).join("")}</AvatarFallback>
                 </Avatar>
                 <h3 className="text-xl font-semibold">
-                  {t(member.name)}
+                  {member.name}
                 </h3>
                 <p className="text-primary mb-2">
                   {t(member.role)}
