@@ -30,15 +30,6 @@ export function HeroSection() {
             <ArrowRight className='ml-2 group-hover:translate-x-1 transition-transform' />
           </Button>
         </div>
-        <img 
-          src="/lovable-uploads/c60441f2-fc22-45e4-84dd-00392976e982.png"
-          alt="Hero illustration"
-          className={cn(
-            "mx-auto mt-12 max-w-md w-full animate-float",
-            "transform transition-all duration-1000 delay-300",
-            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          )}
-        />
       </div>
     </section>
   );
