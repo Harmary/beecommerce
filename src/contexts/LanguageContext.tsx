@@ -16,7 +16,7 @@ export const translations: Translations = {
   },
   description: {
     en: "Transform your eCommerce business with powerful data analytics and real-time insights",
-    ru: "Трансформируйте ваш бизнес электронной коммерции с помощью мощной аналитики данных и аналитики в реальном времени",
+    ru: "Трансформируйте ваш бизнес электронной коммерции с помощью мощной аналитики данных и оперативных инсайтов в нашем сервисе",
   },
   features: {
     en: "Features",
@@ -47,8 +47,8 @@ export const translations: Translations = {
     ru: "Почта",
   },
   INN: {
-    en: 'INN',
-    ru: 'ИНН'
+    en: "INN",
+    ru: "ИНН",
   },
   message: {
     en: "Tell us about your business needs",
@@ -56,23 +56,23 @@ export const translations: Translations = {
   },
   sponsorText: {
     en: 'Project implemented with the support of the "Innovation Promotion Fund" within the framework of the federal project "University Technology Entrepreneurship Platform"',
-    ru: 'Проект выполнен при поддержке «Фонда содействия инновациям» в рамках федерального проекта «Платформа университетского технологического предпринимательства»',
+    ru: "Проект выполнен при поддержке «Фонда содействия инновациям» в рамках федерального проекта «Платформа университетского технологического предпринимательства»",
   },
   'LLC "Beecommerce", 2024': {
     en: 'LLC "Beecommerce", 2024',
-    ru: 'OOO "Бикоммерс", 2024'
+    ru: 'OOO "Бикоммерс", 2024',
   },
-  'All rights reserved.': {
-    en: 'All rights reserved.',
-    ru: 'Все права защищены.'
+  "All rights reserved.": {
+    en: "All rights reserved.",
+    ru: "Все права защищены.",
   },
   smartDataTitle: {
     en: "Smart Data Collection",
     ru: "Умный сбор данных",
   },
   smartDataDesc: {
-    en: "Automatically gather sales, customer behavior, and performance metrics from your eCommerce platforms",
-    ru: "Автоматический сбор данных о продажах, поведении клиентов и показателях эффективности с ваших платформ электронной коммерции",
+    en: "Automatically gather sales, customer behavior, and performance metrics from eCommerce platforms",
+    ru: "Автоматический сбор данных о продажах, поведении клиентов и показателях эффективности с платформ электронной коммерции",
   },
   analyticsTitle: {
     en: "Advanced Analytics",
@@ -138,7 +138,9 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>("ru");

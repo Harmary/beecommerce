@@ -18,57 +18,71 @@ export function FeaturesSection() {
 
   const features: Feature[] = [
     {
-      icon: <Database className="w-10 h-10" />,
+      icon: <Database className='w-10 h-10' />,
       title: "smartDataTitle",
       description: "smartDataDesc",
     },
     {
-      icon: <BarChart3 className="w-10 h-10" />,
+      icon: <BarChart3 className='w-10 h-10' />,
       title: "analyticsTitle",
       description: "analyticsDesc",
     },
     {
-      icon: <LineChart className="w-10 h-10" />,
+      icon: <LineChart className='w-10 h-10' />,
       title: "monitoringTitle",
       description: "monitoringDesc",
     },
     {
-      icon: <Settings className="w-10 h-10" />,
+      icon: <Settings className='w-10 h-10' />,
       title: "integrationTitle",
       description: "integrationDesc",
     },
   ];
 
   return (
-    <section id="features" className="py-20 relative">
-      <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20"></div>
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">{t("features")}</h2>
-        <div className="grid grid-cols-1 gap-16">
+    <section id='features' className='relative mb-32'>
+      <h2 className='text-3xl font-bold text-center mb-16'>{t("features")}</h2>
+      <div className='absolute left-1/2 top-3 mt-16 bottom-0 lg:w-0.5 bg-primary/20'></div>
+      <div className='container mx-auto px-4'>
+        <div className='grid grid-cols-1 gap-16'>
           {features.map((feature, index) => (
             <div
               key={index}
-              ref={index === 0 ? ref1 : index === 1 ? ref2 : index === 2 ? ref3 : ref4}
+              ref={
+                index === 0
+                  ? ref1
+                  : index === 1
+                  ? ref2
+                  : index === 2
+                  ? ref3
+                  : ref4
+              }
               className={cn(
                 "p-6 rounded-lg border hover:border-primary transition-colors group relative",
                 "transform transition-all duration-700",
                 index % 2 === 0 ? "mr-auto" : "ml-auto",
-                index % 2 === 0 ? "translate-x-[-100px]" : "translate-x-[100px]",
-                (index === 0 && inView1) || 
-                (index === 1 && inView2) || 
-                (index === 2 && inView3) || 
-                (index === 3 && inView4) ? "opacity-100 translate-x-0" : "opacity-0",
+                index % 2 === 0
+                  ? "translate-x-[-100px]"
+                  : "translate-x-[100px]",
+                (index === 0 && inView1) ||
+                  (index === 1 && inView2) ||
+                  (index === 2 && inView3) ||
+                  (index === 3 && inView4)
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0",
                 "max-w-xl w-full"
               )}
             >
-              <div className={`absolute top-1/2 -translate-y-1/2 w-8 h-0.5 bg-primary/20 ${
-                index % 2 === 0 ? 'right-[-32px]' : 'left-[-32px]'
-              }`}></div>
-              <div className="text-primary mb-4 group-hover:animate-float">
+              <div
+                className={`absolute top-1/2 -translate-y-1/2 lg:w-8 lg:h-0.5 bg-primary/20 ${
+                  index % 2 === 0 ? "right-[-32px]" : "left-[-32px]"
+                }`}
+              ></div>
+              <div className='text-primary mb-4 group-hover:animate-float'>
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold">{t(feature.title)}</h3>
-              <p className="text-gray-600">{t(feature.description)}</p>
+              <h3 className='text-xl font-semibold'>{t(feature.title)}</h3>
+              <p className='text-gray-600'>{t(feature.description)}</p>
             </div>
           ))}
         </div>
