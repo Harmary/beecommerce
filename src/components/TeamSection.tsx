@@ -1,9 +1,10 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { useInView } from "react-intersection-observer";
 import { cn } from "@/lib/utils";
 
 interface TeamMember {
+  photo: string;
   name: string;
   role: string;
   bio: string;
@@ -18,11 +19,13 @@ export function TeamSection() {
 
   const team: TeamMember[] = [
     {
+      photo: "/lovable-uploads/4318ff02-677a-4fd2-9abe-4dc49e3f71cb.png",
       name: "Maria Kharlamova",
       role: "CEO & Frontend Developer",
       bio: "ceoBio",
     },
     {
+      photo: "/lovable-uploads/85ec408a-fb10-400d-bd90-5a2beb43ac33.png",
       name: "Anatoly Divanis",
       role: "Backend Developer",
       bio: "backendDevBio",
@@ -54,6 +57,7 @@ export function TeamSection() {
             >
               <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
               <Avatar className="w-32 h-32 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
+                <AvatarImage src={member.photo} alt={member.name} className="object-cover" />
                 <AvatarFallback>{member.name.split(" ").map(n => n[0]).join("")}</AvatarFallback>
               </Avatar>
               <h3 className="text-xl font-semibold">{member.name}</h3>

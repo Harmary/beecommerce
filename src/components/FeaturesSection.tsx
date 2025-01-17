@@ -97,13 +97,6 @@ export function FeaturesSection() {
                   <h3 className='text-xl font-semibold mb-2'>{t(feature.title)}</h3>
                   <p className='text-gray-600'>{t(feature.description)}</p>
                 </div>
-                <div className="w-32 h-32 rounded-lg overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
-                  <img 
-                    src={feature.image} 
-                    alt={t(feature.title)}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
               </div>
             </div>
           ))}

@@ -3,6 +3,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 export function Footer() {
   const { t } = useLanguage();
 
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.location.href = "mailto:info@beecommercecorp.ru";
+  };
+
   return (
     <footer className="bg-secondary text-white py-12">
       <div className="container mx-auto px-4">
@@ -11,7 +16,7 @@ export function Footer() {
             <h3 className="text-xl font-bold mb-4">{t('LLC "Beecommerce", 2024')}</h3>
             <p className="text-gray-400">
               {`${t('INN')} 9200024439`}<br/>
-              {t('corpEmail')}: info@beecommercecorp.ru<br />
+              {t('corpEmail')}: <button onClick={handleContactClick} className="text-primary hover:underline">info@beecommercecorp.ru</button><br />
             </p>
           </div>
           <div>
@@ -24,7 +29,8 @@ export function Footer() {
           </div>
         </div>
         <div className="text-center text-sm text-gray-400 pt-8 border-t border-gray-700">
-          © {new Date().getFullYear()} Beecommerce. {t('All rights reserved.')}
+          <p className="mb-2">© {new Date().getFullYear()} Beecommerce. {t('All rights reserved.')}</p>
+          <a href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</a>
         </div>
       </div>
     </footer>
