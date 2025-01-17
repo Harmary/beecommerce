@@ -41,11 +41,10 @@ export function FeaturesSection() {
 
   return (
     <section id='features' className='relative py-32'>
-      <h2 className='text-3xl font-bold text-center mb-16 relative'>
+      <h2 className='text-3xl font-bold text-center mb-16'>
         {t("features")}
-        <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
       </h2>
-      <div className='absolute left-1/2 top-32 bottom-0 lg:w-0.5 bg-gradient-to-b from-primary/50 via-primary/20 to-transparent'></div>
+      <div className='absolute left-1/2 top-40 bottom-0 lg:w-0.5 bg-gradient-to-b from-primary/50 via-primary/20 to-transparent'></div>
       <div className='container mx-auto px-4'>
         <div className='grid grid-cols-1 gap-16'>
           {features.map((feature, index) => (

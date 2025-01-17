@@ -33,8 +33,7 @@ export function TeamSection() {
   ];
 
   return (
-    <section id="team" className="py-20 bg-gray-50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+    <section id="team" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 relative" ref={ref}>
         <h2 className={cn(
           "text-3xl font-bold text-center mb-12 relative",
@@ -42,7 +41,6 @@ export function TeamSection() {
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         )}>
           {t("team")}
-          <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {team.map((member, index) => (
@@ -55,7 +53,6 @@ export function TeamSection() {
               )}
               style={{ '--index': index } as React.CSSProperties}
             >
-              <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
               <Avatar className="w-32 h-32 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
                 <AvatarImage src={member.photo} alt={member.name} className="object-cover" />
                 <AvatarFallback>{member.name.split(" ").map(n => n[0]).join("")}</AvatarFallback>
