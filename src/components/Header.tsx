@@ -10,9 +10,9 @@ export function Header() {
   const { t } = useLanguage();
 
   const navLinks: NavLink[] = [
-    { href: "#features", label: t("features") },
-    { href: "#team", label: t("team") },
-    { href: "#contact", label: t("contact") },
+    { href: "/#features", label: t("features") },
+    { href: "/#team", label: t("team") },
+    { href: "/#contact", label: t("contact") },
   ];
 
   return (

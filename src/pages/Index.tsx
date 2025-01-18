@@ -10,17 +10,18 @@ export default function Index() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className='min-h-screen bg-white'>
       <Header />
       <HeroSection />
       <FeaturesSection />
       <TeamSection />
-      
-      {/* Contact Section */}
-      <section id="contact" className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">{t("formTitle")}</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+
+      <section id='contact' className='py-20'>
+        <div className='container mx-auto px-4'>
+          <h2 className='text-3xl font-bold text-center mb-4'>
+            {t("formTitle")}
+          </h2>
+          <p className='text-center text-gray-600 mb-12 max-w-2xl mx-auto'>
             {t("formDesc")}
           </p>
           <ContactForm />
