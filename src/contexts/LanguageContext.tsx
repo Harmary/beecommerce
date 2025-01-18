@@ -198,6 +198,26 @@ export const translations: Translations = {
     en: "Back to Home",
     ru: "Вернуться на главную",
   },
+  serviceTitle: {
+    en: "Transform Your eCommerce Analytics",
+    ru: "Трансформируйте аналитику вашего интернет-магазина",
+  },
+  serviceDescription: {
+    en: "BeeCommerce is a comprehensive analytics platform designed specifically for eCommerce businesses. We help you make data-driven decisions by providing real-time insights into your online store's performance.",
+    ru: "BeeCommerce - это комплексная аналитическая платформа, разработанная специально для бизнеса электронной коммерции. Мы помогаем вам принимать решения на основе данных, предоставляя аналитику в реальном времени о работе вашего интернет-магазина.",
+  },
+  serviceBenefit1: {
+    en: "Advanced analytics tools tailored specifically for eCommerce businesses",
+    ru: "Продвинутые инструменты аналитики, созданные специально для электронной коммерции",
+  },
+  serviceBenefit2: {
+    en: "Real-time monitoring of key performance indicators and sales metrics",
+    ru: "Мониторинг ключевых показателей эффективности и метрик продаж в реальном времени",
+  },
+  serviceBenefit3: {
+    en: "Actionable insights to optimize your online store's performance",
+    ru: "Практические рекомендации для оптимизации работы вашего интернет-магазина",
+  },
 };
 
 interface LanguageContextType {
