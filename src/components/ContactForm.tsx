@@ -42,6 +42,7 @@ export function ContactForm() {
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           required
+          autoComplete="name"
           className="focus:ring-2 focus:ring-primary focus:border-primary"
         />
       </div>
@@ -52,6 +53,7 @@ export function ContactForm() {
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           required
+          autoComplete="email"
           className="focus:ring-2 focus:ring-primary focus:border-primary"
         />
       </div>

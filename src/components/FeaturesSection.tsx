@@ -41,10 +41,13 @@ export function FeaturesSection() {
 
   return (
     <section id='features' className='relative py-32'>
-      <h2 className='text-3xl font-bold text-center mb-16'>
+      {/* Blurred object under heading */}
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+      
+      <h2 className='text-3xl font-bold text-center mb-16 relative'>
         {t("features")}
       </h2>
-      <div className='absolute left-1/2 top-40 bottom-0 lg:w-0.5 bg-gradient-to-b from-primary/50 via-primary/20 to-transparent'></div>
+      <div className='absolute left-1/2 top-48 bottom-0 lg:w-0.5 bg-gradient-to-b from-primary/50 via-primary/20 to-transparent'></div>
       <div className='container mx-auto px-4'>
         <div className='grid grid-cols-1 gap-16'>
           {features.map((feature, index) => (

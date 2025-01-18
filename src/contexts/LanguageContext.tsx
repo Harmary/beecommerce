@@ -178,6 +178,26 @@ export const translations: Translations = {
     en: "I agree to the",
     ru: "Я согласен с",
   },
+  "I agree to the": {
+    en: "I agree to the",
+    ru: "Я согласен с",
+  },
+  "privacy policy": {
+    en: "privacy policy",
+    ru: "политикой конфиденциальности",
+  },
+  "Maria Kharlamova": {
+    en: "Maria Kharlamova",
+    ru: "Мария Харламова",
+  },
+  "Anatoly Divanis": {
+    en: "Anatoly Divanis",
+    ru: "Анатолий Диванис",
+  },
+  "Back to Home": {
+    en: "Back to Home",
+    ru: "Вернуться на главную",
+  },
 };
 
 interface LanguageContextType {
