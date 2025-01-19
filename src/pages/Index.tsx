@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
+import { ServiceDescription } from "@/components/ServiceDescription";
 import { FeaturesSection } from "@/components/FeaturesSection";
 import { TeamSection } from "@/components/TeamSection";
 import { ContactForm } from "@/components/ContactForm";
@@ -13,6 +14,7 @@ export default function Index() {
     <div className='min-h-screen bg-white'>
       <Header />
       <HeroSection />
+      <ServiceDescription />
       <FeaturesSection />
       <TeamSection />
 

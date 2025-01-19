@@ -3,6 +3,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 export function Footer() {
   const { t } = useLanguage();
 
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.location.href = "mailto:info@beecommercecorp.ru";
+  };
+
   return (
     <footer className='bg-secondary text-white py-12'>
       <div className='container mx-auto px-4'>

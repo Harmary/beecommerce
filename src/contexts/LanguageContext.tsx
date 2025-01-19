@@ -198,6 +198,38 @@ export const translations: Translations = {
     en: "Get in touch with us to discover how Beecommerce can transform your business data into actionable insights",
     ru: "Свяжитесь с нами, чтобы узнать, как Beecommerce может превратить данные вашего бизнеса в полезные инсайты",
   },
+  agreeToPrivacyPolicy: {
+    en: "I agree to the",
+    ru: "Я согласен с",
+  },
+  "Maria Kharlamova": {
+    en: "Maria Kharlamova",
+    ru: "Мария Харламова",
+  },
+  "Anatoly Divanis": {
+    en: "Anatoly Divanis",
+    ru: "Анатолий Диванис",
+  },
+  serviceTitle: {
+    en: "Transform Your eCommerce Analytics",
+    ru: "Трансформируйте аналитику вашего интернет-магазина",
+  },
+  serviceDescription: {
+    en: "BeeCommerce is a comprehensive analytics platform designed specifically for eCommerce businesses. We help you make data-driven decisions by providing insights into online stores's performance.",
+    ru: "BeeCommerce - это комплексная аналитическая платформа, разработанная специально для бизнеса электронной коммерции. Мы помогаем вам принимать решения на основе данных, предоставляя аналитику о работе интернет-магазинов.",
+  },
+  serviceBenefit1: {
+    en: "Advanced analytics tools tailored specifically for eCommerce businesses",
+    ru: "Продвинутые инструменты аналитики, созданные специально для электронной коммерции",
+  },
+  serviceBenefit2: {
+    en: "Real-time monitoring of key performance indicators and sales metrics",
+    ru: "Мониторинг ключевых показателей эффективности и метрик продаж в реальном времени",
+  },
+  serviceBenefit3: {
+    en: "Actionable insights to optimize your online store's performance",
+    ru: "Практические рекомендации для оптимизации работы вашего интернет-магазина",
+  },
 };
 
 interface LanguageContextType {

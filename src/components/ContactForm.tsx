@@ -3,8 +3,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
-import { Checkbox } from "./ui/checkbox";
 
 export function ContactForm() {
   const { t } = useLanguage();
@@ -14,6 +14,7 @@ export function ContactForm() {
     message: "",
     acceptPolicy: false,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
