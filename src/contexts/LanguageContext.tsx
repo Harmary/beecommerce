@@ -204,7 +204,7 @@ export const translations: Translations = {
   },
   serviceDescription: {
     en: "BeeCommerce is a comprehensive analytics platform designed specifically for eCommerce businesses. We help you make data-driven decisions by providing insights into online stores's performance.",
-    ru: "BeeCommerce - это комплексная аналитическая платформа, разработанная специально для бизнеса электронной коммерции. Мы помогаем вам принимать решения на основе данных, предоставляя аналитику в реальном времени о работе вашего интернет-магазина.",
+    ru: "BeeCommerce - это комплексная аналитическая платформа, разработанная специально для бизнеса электронной коммерции. Мы помогаем вам принимать решения на основе данных, предоставляя аналитику о работе интернет-магазинов.",
   },
   serviceBenefit1: {
     en: "Advanced analytics tools tailored specifically for eCommerce businesses",
