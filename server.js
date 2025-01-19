@@ -1,20 +1,22 @@
-
 import express from 'express';
 import bodyParser from 'body-parser';
 import fetch from 'node-fetch';
 import cors from 'cors';
 
 const app = express();
-const TELEGRAM_BOT_TOKEN = '7714564597:AAHA1_lTI6tyyW6wf35lhw0q7HaT3awcd2s';
-const TELEGRAM_CHAT_ID = '-4654902560';
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+
+if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
+  console.error('Missing required environment variables: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID');
+  process.exit(1);
+}
 
 app.use(cors());
-
 app.use(bodyParser.json());
 
 app.post('/send-message', async (req, res) => {
     const { name, email, message } = req.body;
-
     const text = `<b>Новая заявка</b>\nИмя: ${name}\nПочта: ${email}\nСообщение: ${message}`;
 
     try {
