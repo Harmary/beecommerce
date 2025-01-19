@@ -44,8 +44,8 @@ export function ServiceDescription() {
           <div className="relative">
             <div className="aspect-square rounded-full bg-primary/10 absolute -z-10 animate-pulse" />
             <img 
-              src="/lovable-uploads/4318ff02-677a-4fd2-9abe-4dc49e3f71cb.png"
-              alt="BeeCommerce Analytics"
+              src="/lovable-uploads/599199a1-f66f-4cbd-b5eb-7236ab33c449.png"
+              alt="BeeCommerce Analytics Dashboard"
               className="relative z-10 w-full h-auto rounded-lg shadow-xl"
             />
           </div>

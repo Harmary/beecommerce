@@ -203,7 +203,7 @@ export const translations: Translations = {
     ru: "Трансформируйте аналитику вашего интернет-магазина",
   },
   serviceDescription: {
-    en: "BeeCommerce is a comprehensive analytics platform designed specifically for eCommerce businesses. We help you make data-driven decisions by providing real-time insights into your online store's performance.",
+    en: "BeeCommerce is a comprehensive analytics platform designed specifically for eCommerce businesses. We help you make data-driven decisions by providing insights into online stores's performance.",
     ru: "BeeCommerce - это комплексная аналитическая платформа, разработанная специально для бизнеса электронной коммерции. Мы помогаем вам принимать решения на основе данных, предоставляя аналитику в реальном времени о работе вашего интернет-магазина.",
   },
   serviceBenefit1: {
