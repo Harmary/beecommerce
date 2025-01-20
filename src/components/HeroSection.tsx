@@ -19,7 +19,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className='lg:pt-80 lg:pb-96 pt-32 pb-32 bg-gradient-to-b from-primary-light/10 to-white'>
+    <section className='lg:py-80 py-32 bg-gradient-to-b from-primary-light/10 to-white'>
       <div className='container mx-auto px-4 text-center'>
         <h1 className='text-4xl md:text-6xl font-bold text-secondary mb-6'>
           {t("slogan")}

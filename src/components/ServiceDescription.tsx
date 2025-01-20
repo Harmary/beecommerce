@@ -11,42 +11,46 @@ export function ServiceDescription() {
   });
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className='py-24 bg-white relative overflow-hidden'>
       {/* Background decorative elements */}
-      <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
-      
-      <div className="container mx-auto px-4" ref={ref}>
-        <div className={cn(
-          "grid lg:grid-cols-2 gap-12 items-center",
-          "transform transition-all duration-1000",
-          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        )}>
+      <div className='absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl' />
+      <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl' />
+
+      <div className='container mx-auto px-4' ref={ref}>
+        <div
+          className={cn(
+            "grid lg:grid-cols-2 gap-12 items-center",
+            "transform transition-all duration-1000",
+            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          )}
+        >
           {/* Left column with text */}
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary">
+          <div className='space-y-6'>
+            <h2 className='text-3xl md:text-4xl font-bold text-secondary'>
               {t("serviceTitle")}
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className='text-lg text-gray-600 leading-relaxed'>
               {t("serviceDescription")}
             </p>
-            <ul className="space-y-4">
+            <ul className='space-y-4'>
               {[1, 2, 3].map((item) => (
-                <li key={item} className="flex items-start space-x-3">
-                  <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-gray-600">{t(`serviceBenefit${item}`)}</span>
+                <li key={item} className='flex items-start space-x-3'>
+                  <ArrowRight className='h-6 w-6 text-primary flex-shrink-0 mt-1' />
+                  <span className='text-gray-600'>
+                    {t(`serviceBenefit${item}`)}
+                  </span>
                 </li>
               ))}
             </ul>
           </div>
-          
+
           {/* Right column with image/illustration */}
-          <div className="relative">
-            <div className="aspect-square rounded-full bg-primary/10 absolute -z-10 animate-pulse" />
-            <img 
-              src="/lovable-uploads/599199a1-f66f-4cbd-b5eb-7236ab33c449.png"
-              alt="BeeCommerce Analytics Dashboard"
-              className="relative z-10 w-full h-auto rounded-lg shadow-xl"
+          <div className='relative'>
+            <div className='aspect-square rounded-full bg-primary/10 absolute -z-10 animate-pulse' />
+            <img
+              src='/lovable-uploads/599199a1-f66f-4cbd-b5eb-7236ab33c449.png'
+              alt='BeeCommerce Analytics Dashboard'
+              className='relative z-10 w-full h-auto rounded-lg shadow-xl'
             />
           </div>
         </div>
