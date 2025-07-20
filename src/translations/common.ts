@@ -37,6 +37,6 @@ export const commonTranslations = {
   },
   sponsorText: {
     en: 'Project implemented with the support of the "Innovation Promotion Fund" within the framework of the federal project "University Technology Entrepreneurship Platform"',
-    ru: "Проект выполнен при поддержке «Фонда содействия инновациям» в рамках федерального проекта «Платформа университетского технологического предпринимательства»",
+    ru: "Проект выполнен при поддержке «Фонда содействия инновациям» в рамках программы «Студенческий стартап» федерального проекта «Платформа университетского технологического предпринимательства»",
   },
 };
