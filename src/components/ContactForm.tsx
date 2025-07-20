@@ -81,7 +81,7 @@ export function ContactForm() {
         />
         <label htmlFor='privacy' className='text-sm text-gray-600'>
           {t("I agree to the")}{" "}
-          <a href='https://disk.yandex.ru/i/cIsFRy6EUXx-lg' target='_blank' rel='noopener noreferrer' className='text-primary hover:underline'>
+          <a href='https://disk.yandex.ru/i/yaveoNGLONG5jg' target='_blank' rel='noopener noreferrer' className='text-primary hover:underline'>
             {t("privacy policy")}
           </a>
         </label>
