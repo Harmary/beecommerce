@@ -39,7 +39,7 @@ export const privacyTranslations = {
     en: "If you have any questions about this Privacy Policy, please contact us at info@beecommercecorp.ru",
     ru: "Если у вас есть вопросы по поводу данной Политики конфиденциальности, пожалуйста, свяжитесь с нами по адресу info@beecommercecorp.ru",
   },
-  agreeToPrivacyPolicy: {
+  "I agree to the": {
     en: "I agree to the",
     ru: "Я согласен с",
   },
