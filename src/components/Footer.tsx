@@ -34,14 +34,14 @@ export function Footer() {
               <br />
             </p>
           </div>
-          <div>
-            <img
-              src='/lovable-uploads/c60441f2-fc22-45e4-84dd-00392976e982.png'
-              alt='Sponsor Logo'
-              className='h-12 mb-4'
-            />
-            <p className='text-sm text-gray-400'>{t("sponsorText")}</p>
-          </div>
+          <div className="flex items-start gap-2">
+              <img
+                src='/lovable-uploads/c60441f2-fc22-45e4-84dd-00392976e982.png'
+                alt='Sponsor Logo'
+                className='h-12 flex-shrink-0'
+              />
+              <p className='text-sm text-gray-400'>{t("sponsorText")}</p>
+            </div>
         </div>
         <div className='text-center text-sm text-gray-400 pt-8 border-t border-gray-700'>
           © {new Date().getFullYear()} Beecommerce. {t("All rights reserved.")}
